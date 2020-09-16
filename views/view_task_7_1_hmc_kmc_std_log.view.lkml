@@ -52,4 +52,21 @@ view: view_task_7_1_hmc_kmc_std_log {
     type: count
     drill_fields: []
   }
+
+  measure: count_vin {
+    type: count
+    #sql: ${TABLE}.vin ;;
+  }
+
+  measure: distinct_count_vin {
+    type: count_distinct
+    #sql: ${TABLE}.vin ;;
+  }
+
+  measure: a1 {
+    type: number
+    sql: ${distinct_count_vin}/${count_vin} ;;
+  }
+
+
 }

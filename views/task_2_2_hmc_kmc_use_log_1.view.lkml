@@ -59,4 +59,35 @@ view: task_2_2_hmc_kmc_use_log_1 {
     type: count
     drill_fields: []
   }
+
+  measure: count_vin {
+    type: count
+    #sql: ${TABLE}.vin ;;
+  }
+
+  measure: distinct_count_vin {
+    type: count_distinct
+    #sql: ${TABLE}.vin ;;
+  }
+
+  measure: a1 {
+    type: number
+    sql: ${distinct_count_vin}/${count_vin} ;;
+  }
+
+  measure: sum_trip_cnt {
+    type: sum
+    sql: ${TABLE}.trip_cnt ;;
+  }
+
+  measure: sum_trip_use_log_cnt {
+    type: sum
+    sql: ${TABLE}.trip_use_log_cnt ;;
+  }
+
+  measure: a2 {
+    type: number
+    sql: ${sum_trip_use_log_cnt}/${sum_trip_cnt} ;;
+  }
+
 }
