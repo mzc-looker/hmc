@@ -67,7 +67,7 @@ view: task_2_2_hmc_kmc_use_log_1 {
 
   measure: distinct_count_vin {
     type: count_distinct
-    drill_fields: [vin]
+    sql: ${vin} ;;
   }
 
   measure: a1 {
