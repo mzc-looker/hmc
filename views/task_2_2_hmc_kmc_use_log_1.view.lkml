@@ -85,9 +85,9 @@ view: task_2_2_hmc_kmc_use_log_1 {
     sql: ${TABLE}.trip_use_log_cnt ;;
   }
 
-  #measure: a2 {
-  #  type: number
-  #  sql: ${sum_trip_use_log_cnt}/${sum_trip_cnt} ;;
-  #}
+  measure: a2 {
+    type: number
+    sql: ${sum_trip_use_log_cnt}/${sum_trip_cnt} ;;
+  }
 
 }
