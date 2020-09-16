@@ -41,6 +41,13 @@ view: view_task_7_1_hmc_kmc_std_log {
     sql: ${TABLE}.vin_std_log_cnt ;;
   }
 
+  dimension: location {
+    type: location
+    sql_latitude: ${TABLE}.latitude ;;
+    sql_longitude: ${TABLE}.longitude ;;
+  }
+
+
   measure: count {
     type: count
     drill_fields: []
