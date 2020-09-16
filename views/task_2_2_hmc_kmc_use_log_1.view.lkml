@@ -62,18 +62,18 @@ view: task_2_2_hmc_kmc_use_log_1 {
 
   measure: count_vin {
     type: count
-    #sql: ${TABLE}.vin ;;
+    drill_fields: [vin]
   }
 
   measure: distinct_count_vin {
     type: count_distinct
-    #sql: ${TABLE}.vin ;;
+    drill_fields: [vin]
   }
 
-  #measure: a1 {
-  #  type: number
-  #  sql: ${distinct_count_vin}/${count_vin} ;;
-  #}
+  measure: a1 {
+    type: number
+    sql: ${distinct_count_vin}/${count_vin} ;;
+  }
 
   measure: sum_trip_cnt {
     type: sum
