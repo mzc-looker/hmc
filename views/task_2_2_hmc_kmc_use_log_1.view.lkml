@@ -73,6 +73,7 @@ view: task_2_2_hmc_kmc_use_log_1 {
   measure: a1 {
     type: number
     sql: ${distinct_count_vin}/${count_vin} ;;
+    value_format: "#.###.##"
   }
 
   measure: sum_trip_cnt {
@@ -88,6 +89,7 @@ view: task_2_2_hmc_kmc_use_log_1 {
   measure: a2 {
     type: number
     sql: ${sum_trip_use_log_cnt}/${sum_trip_cnt} ;;
+    value_format: "#.###.##"
   }
 
 }
