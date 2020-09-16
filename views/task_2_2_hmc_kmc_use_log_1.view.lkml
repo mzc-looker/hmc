@@ -70,10 +70,10 @@ view: task_2_2_hmc_kmc_use_log_1 {
     #sql: ${TABLE}.vin ;;
   }
 
-  measure: a1 {
-    type: number
-    sql: ${distinct_count_vin}/${count_vin} ;;
-  }
+  #measure: a1 {
+  #  type: number
+  #  sql: ${distinct_count_vin}/${count_vin} ;;
+  #}
 
   measure: sum_trip_cnt {
     type: sum
@@ -85,9 +85,9 @@ view: task_2_2_hmc_kmc_use_log_1 {
     sql: ${TABLE}.trip_use_log_cnt ;;
   }
 
-  measure: a2 {
-    type: number
-    sql: ${sum_trip_use_log_cnt}/${sum_trip_cnt} ;;
-  }
+  #measure: a2 {
+  #  type: number
+  #  sql: ${sum_trip_use_log_cnt}/${sum_trip_cnt} ;;
+  #}
 
 }
